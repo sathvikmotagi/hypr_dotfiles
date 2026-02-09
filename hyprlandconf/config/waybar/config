@@ -1,0 +1,146 @@
+{
+    "layer": "top",
+    "position": "top",
+    "spacing": 0,
+    "height": 21,
+    "margin-top": 10,
+    "margin-left": 12,
+    "margin-right": 12,
+
+
+    "modules-left": [
+        "custom/logo",
+        "hyprland/workspaces"
+    ],
+
+    "modules-center": [
+        "clock"
+    ],
+
+    "modules-right": [
+        "hyprland/window",
+        "tray",
+        "memory",
+        "wireplumber",
+        "battery",
+        "bluetooth",
+        "custom/power"
+    ],
+
+
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "on-click-right": "fullscreen",
+        "icon-theme": "WhiteSur",
+        "icon-size": 25,
+        "tooltip-format": "{title}"
+    },
+
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "format": "{icon}",
+
+        "format-icons": {
+            "default": "",
+            "active": "󱓻",
+            "urgent": "󱓻"
+        },
+
+        "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": [],
+            "5": [],
+            "6": [],
+            "7": [],
+            "8": [],
+            "9": [],
+            "10": []
+        }
+    },
+
+    "memory": {
+        "interval": 5,
+        "format": "󰍛 {}%",
+        "max-length": 10
+    },
+
+    "tray": {
+        "spacing": 8
+    },
+
+    "clock": {
+        "tooltip-format": "{calendar}",
+        "format-alt": "  {:%a, %d %b %Y}",
+        "format": "  {:%I:%M %p}"
+    },
+
+    
+
+    "wireplumber": {
+        "format": "{icon}",
+        "format-bluetooth": " 󰂰",
+        "nospacing": 1,
+        "tooltip-format": "Volume : {volume}%",
+        "format-muted": "󰝟",
+
+        "format-icons": {
+            "headphone": "",
+            "default": ["󰖀","󰕾"," "]
+        },
+
+        "on-click": "pamixer -t",
+        "scroll-step": 1
+    },
+
+    "custom/logo": {
+        "format": "  ",
+        "tooltip": false,
+        "on-click": "~/.config/rofi/launchers/misc/launcher.sh &"
+    },
+
+
+    "battery": {
+        "format": "{capacity}% {icon}",
+
+        "format-icons": {
+            "charging": [
+                "󰢜","󰂆","󰂇","󰂈","󰢝",
+                "󰂉","󰢞","󰂊","󰂋","󰂅"
+            ],
+            "default": [
+                "󰁺","󰁻","󰁼","󰁽","󰁾",
+                "󰁿","󰂀","󰂁","󰂂","󰁹"
+            ]
+        },
+
+        "format-full": "Charged ",
+        "interval": 5,
+
+        "states": {
+            "warning": 20,
+            "critical": 10
+        },
+
+        "tooltip": false
+    },
+
+    "custom/power": {
+        "format": "  ",
+        "tooltip": false,
+        "on-click": "~/.config/rofi/powermenu/type-2/powermenu.sh &"
+    }
+},
+
+    "taskbar": {
+  "icon-size": 14,
+  "spacing": 6,
+  "tooltip": true,
+  "on-click": "activate",
+  "on-click-middle": "close",
+  "ignore-list": [],
+  "app_ids-mapping": {}
+}
+
